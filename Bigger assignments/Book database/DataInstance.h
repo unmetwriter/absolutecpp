@@ -1,36 +1,36 @@
 #include <string>
 #include <iostream>
+using namespace std;
 
 class DataInstance
 {
 private:
-    std::string title;
-    std::string author;
-    std::string publisher;
-    std::string isbn;
+    string title;
+    string author;
+    string publisher;
+    string isbn;
     int year;
-    DataInstance *next = nullptr;
-    DataInstance *previous = nullptr;
 
 public:
+    DataInstance *next = nullptr;
+    DataInstance *previous = nullptr;
     DataInstance(
-        std::string &title,
-        std::string &author,
+        string &title,
+        string &author,
+        string &publisher,
+        string &isbn,
         int year,
-        std::string &publisher,
-        std::string &isbn,
         DataInstance *previous = nullptr,
         DataInstance *next = nullptr);
-
-    std::string getTitle() const;
-    std::string getAuthor() const;
-    std::string getPublisher() const;
-    std::string getIsbn() const;
+    ~DataInstance();
+    string getTitle() const;
+    string getAuthor() const;
+    string getPublisher() const;
+    string getIsbn() const;
     int getYear() const;
-    ;
-    std::string setTitle(const std::string &newTitle);
-    std::string setAuthor(const std::string &newAuthor);
-    std::string setPublisher(const std::string &newPublisher);
-    std::string setIsbn(const std::string &newIsbn);
+    string setTitle(const string &newTitle);
+    string setAuthor(const string &newAuthor);
+    string setPublisher(const string &newPublisher);
+    string setIsbn(const string &newIsbn);
     int setYear(const int &newYear);
 };
